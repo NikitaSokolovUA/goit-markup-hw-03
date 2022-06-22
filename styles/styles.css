@@ -11,6 +11,7 @@
     --basic-background-color: #2F303A;
     --secondary-background-color: #F5F4FA;
     --secondary-text-color:rgba(255, 255, 255, 0.6);
+    --border-color: #EEEEEE;
 }
 
 body{
@@ -33,12 +34,25 @@ body{
 }
 
 .container{
-    width: 800px;
+    width: 1230px;
     margin: 0 auto;
     padding: 0 15px;
 }
 /* Шапка сайта*/
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color) ;
+}
+.main-nav{
+    display: flex;
+    align-items: center;
+}
+
 .logo {
+    margin-right: 93px;
     color:var(--title-text-color);
     font-family: Raleway;
         font-weight: 700;
@@ -50,13 +64,28 @@ body{
 }
 
 /* навигация на другие страницы*/
+.site-nav{
+    display: flex;
+}
+
+.contact-nav{
+    display: flex;
+}
+
 .site-nav .nav-link,
 .contact-nav .contact-link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     color:var(--title-text-color);
         font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.02em;
+}
+.site-nav .item:not(:last-child),
+.contact-nav .item:not(:last-child){
+    margin-right: 50px;
 }
 
 .site-nav .nav-link:focus,
@@ -77,6 +106,10 @@ body{
 .contact-link:focus{
     color:var(--accent-color);
 }
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 /* main */
 /*Hero*/
@@ -87,6 +120,9 @@ body{
 .hero-title{
     margin-top: 0;
     margin-bottom: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+
     color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
@@ -127,6 +163,13 @@ body{
 }
 
 /*приемущества*/
+.advantage{
+    display: flex;
+}
+.advantage .advantage-list:not(:last-child){
+    margin-right: 30px;
+}
+
 .advantage-list .section-title{
     margin-bottom: 10px;
     color: var(--title-text-color);
@@ -142,28 +185,53 @@ body{
     font-size: 14px;
     line-height: 1.71;
 }
+/* Чем мы занимаемся */
+.work-list{
+    display: flex;
+    justify-content: center;
+}
+.work-list .item:not(:last-child){
+    margin-right: 30px;
+}
+
 /*Team*/
-.team{
+.team-section{
     background-color: var(--secondary-background-color);
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
 }
+.team{
+    display: flex;
+    justify-content: center;
+}
+.team .team-list:not(:last-child){
+    margin-right: 30px;
+}
+
+.team .team-list{
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
 
 .team-list .section-title{
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
 }
 .team-list .text{
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 
 /*footer*/
 .footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color:var(--basic-background-color);
 }
 
@@ -192,6 +260,16 @@ body{
     margin-bottom: 9px;
     color:var(--secondary-text-color);
 }
+/* PORTFOLIO */
+
+.portfolio-list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 56px;
+}
+.portfolio-list .item:not(:last-child){
+    margin-right: 8px;
+}
 
 /*Дизайн кнопок на портфолио*/
 .section .portfolio-button{
@@ -215,9 +293,27 @@ body{
     background-color:var(--accent-color);
 }
 
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio .item{
+border: 1px solid var(--border-color);
+}
+
+.portfolio .item:not(:nth-of-type(3n)){
+    margin-right: 30px;
+}
+.portfolio .item:not(:nth-last-child(-n + 3)){
+    margin-bottom: 30px;
+}
+
 .portfolio-title{
     margin-top: 20px;
     margin-bottom: 4px;
+    margin-right: 24px;
+    margin-left: 24px;    
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
@@ -228,5 +324,7 @@ body{
 .portfolio-text{
     margin-top: 0;
     margin-bottom: 20px;
+    margin-right: 24px;
+    margin-left: 24px;
     line-height: 1.88;
 }
