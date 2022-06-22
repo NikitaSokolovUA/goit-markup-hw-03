@@ -20,6 +20,20 @@ body{
     font-family: Roboto, sans-serif;
     letter-spacing: 0.03em;
 }
+/* скрываем заголовки */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
  /*Убирает подчеркивание с ссылок*/
 .link{
     text-decoration: none;
@@ -34,7 +48,7 @@ body{
 }
 
 .container{
-    width: 1230px;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -116,12 +130,15 @@ body{
 .hero{
     background-color:var(--basic-background-color);
     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hero-title{
+    width: 694px;
     margin-top: 0;
     margin-bottom: 30px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: auto;
+    margin-right: auto;
 
     color: var(--white-color);
     font-weight: 900;
@@ -186,6 +203,9 @@ body{
     line-height: 1.71;
 }
 /* Чем мы занимаемся */
+.work-section{
+    padding-bottom: 94px;
+}
 .work-list{
     display: flex;
     justify-content: center;
@@ -215,16 +235,20 @@ body{
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-list .section-title{
+.team-list .item{
     margin-top: 30px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
+}
+
+.team-list .section-title{
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
 }
 .team-list .text{
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 
@@ -238,16 +262,20 @@ body{
 .footer-logo{
     display: inline-block;
     margin-bottom: 20px;
+    margin-right: 0;
     color:var(--white-color);
 }
 .footer-logo .footer-accent{
     color:var(--accent-color)
 }
+.address-list .item{
+    margin-top: 9px;
+}
 
 .address .text{
     display: inline-block;
     margin-top: 0;
-    margin-bottom: 9px;
+    margin-bottom: 0;
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
@@ -255,9 +283,6 @@ body{
 }
 
 .footer .address-contact.text{
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 9px;
     color:var(--secondary-text-color);
 }
 /* PORTFOLIO */
@@ -293,13 +318,16 @@ body{
     background-color:var(--accent-color);
 }
 
+.portfolio-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
 .portfolio{
     display: flex;
     flex-wrap: wrap;
-}
-
-.portfolio .item{
-border: 1px solid var(--border-color);
+    width: 370;
 }
 
 .portfolio .item:not(:nth-of-type(3n)){
@@ -308,12 +336,19 @@ border: 1px solid var(--border-color);
 .portfolio .item:not(:nth-last-child(-n + 3)){
     margin-bottom: 30px;
 }
+.portfolio-item{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 24px;
+    padding-left: 24px;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
 
 .portfolio-title{
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 4px;
-    margin-right: 24px;
-    margin-left: 24px;    
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
@@ -323,8 +358,6 @@ border: 1px solid var(--border-color);
 
 .portfolio-text{
     margin-top: 0;
-    margin-bottom: 20px;
-    margin-right: 24px;
-    margin-left: 24px;
+    margin-bottom: 0;
     line-height: 1.88;
 }
